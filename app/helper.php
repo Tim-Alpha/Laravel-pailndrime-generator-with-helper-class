@@ -7,8 +7,11 @@ if (!function_exists('generatePalindrome')) {
     function generatePalindrome($input)
     {
         $reversedInput = strrev($input);
-        $palindrome = $input . $reversedInput;
-        return $palindrome;
+        $result = "Yes input text is a palindrome";
+        if ($input != $reversedInput) {
+            $result = "No input text is not a palindrome";
+        }
+        return $result;
     }
 }
 
